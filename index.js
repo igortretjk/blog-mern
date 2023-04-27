@@ -7,7 +7,7 @@ import {handleValidatorErrors, checkAuth} from './utils/index.js'
 import { registerValidator, loginValidator, postCreateValidation } from "./validation.js";
 import {PostController, UserController} from './controllers/index.js'
 
-mongoose.connect(process.env.MONGODB_URI)
+mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://ihor:123456n@jopaclaster.3hnmgju.mongodb.net/blog?retryWrites=true&w=majority')
 .then(() => {
   console.log("DB OK")
 })
